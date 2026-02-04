@@ -1,0 +1,80 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #050505; /* Deep Black */
+    color: #00d4ff; /* Cyber Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile h1 {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+.profile p {
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+/* Link Styling */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-card {
+    text-decoration: none;
+    color: #00d4ff;
+    border: 1px solid #00d4ff;
+    padding: 15px;
+    border-radius: 0px; /* Sharp edges for a tech feel */
+    background: rgba(0, 212, 255, 0.05);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.link-card:hover {
+    background: #00d4ff;
+    color: #000;
+    box-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+    transform: scale(1.05);
+}
+
+/* Subtle background scanline effect */
+body::before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    z-index: 10;
+}
